@@ -20,9 +20,9 @@ public class MapAppTest {
     @Test
     public void buildMap() throws Exception {
 
-        Map<Integer, String> map= app.buildMap(1,"Jo", 18, "Jack");
+        Map<Integer, String> map= app.buildMap(1,"Jo", 19, "Jack");
         assertEquals(map.get(1), "Jo");
-        assertEquals(map.get(18), "Jack");
+        assertEquals(map.get(19), "Jack");
         assertNull(map.get(2));
 
     }

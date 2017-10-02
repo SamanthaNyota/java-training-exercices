@@ -1,8 +1,9 @@
 package io.robusta.java.classic;
 
 import org.junit.Test;
-
 import static org.junit.Assert.*;
+
+
 
 /**
  * Created by nicorama on 21/06/2017.
