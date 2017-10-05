@@ -74,7 +74,7 @@ public class PenguinAppTest {
     }
 
     @Test
-    public void getFriend(Penguin penguin){
+    public void getFriend(){
         Penguin friend = app.getFriend(ricoh);
         assertSame(tux, friend);
 

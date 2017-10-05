@@ -1,5 +1,8 @@
 package io.robusta.java.classic.pingouins;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -9,20 +12,33 @@ public class PenguinApp {
 
 
     Penguin createSimplePenguin(){
-        return null;
+
+        Penguin johan = new Penguin ("Johan");
+
+        return johan;
     }
+
+
 
 
     List<Penguin> getPenguins(Penguin p1, Penguin p2, Penguin p3, Penguin p4, Penguin p5){
-        return null;
+
+        List<Penguin> penguins = new ArrayList<>();
+        penguins.addAll(Arrays.asList(p1, p2, p3, p4, p5));
+    	
+        return penguins;
     }
 
     Penguin getPenguinByName(Penguin[] pingouins, String name){
+    	
+    	
         return null;
     }
 
 
     Penguin getFastest(List<Penguin> penguins){
+    	
+    	
         return null;
     }
 
@@ -55,3 +71,6 @@ public class PenguinApp {
 
 
 }
+
+//liste size
+//tableau length

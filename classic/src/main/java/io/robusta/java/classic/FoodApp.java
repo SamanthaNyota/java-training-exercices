@@ -14,18 +14,34 @@ public class FoodApp {
 
 
     void reset(){
-
+    	
+    	money = 0; //argent de la boite
+    	foodStock = 1000;//stock de nourriture
+    	
+ 
     }
 
     int deliver(int food){
-
-        return 0;
+    	int gross = 2*food; 
+    	foodStock -= food; // foodstock = foodstock - food
+    	money = money + gross - TRAVEL_COST;
+   
+        return gross;
     }
 
     int deliverAll(int count, int food){
+    	
+    	int value = 0; //value peut être renommée gross
+    	for (int i = 0; i<count; i++){
+    		value += deliver(food); //value = value +deliver(food)
+    	}
 
-        return 0;
+        return value;
     }
 
 
 }
+
+
+
+//fonction qui renvoie combien j'ai gagné

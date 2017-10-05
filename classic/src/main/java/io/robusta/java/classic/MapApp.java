@@ -67,28 +67,45 @@ public class MapApp {
 
 	List<Integer> getKeysHavingValue(Map<Integer, String> map, String value) {
 		List<Integer> list = new ArrayList<>();
-		Set<Entry<Integer,String>> set = new HashSet<>();
-		set = map.entrySet();
-		return set;
+		for (Entry<Integer,String> entry : map.entrySet()){
+			if (entry.getValue() == value) {
+				list.add(entry.getKey());
+			}
+		}
+		
+		return list;
 	}
 
 	List<Integer> getKeysHavingValueAnyValue(Map<Integer, String> map, String... values) {
-		return null;
+		List<Integer> list = new ArrayList<>();
+		
+		for (String value : values) {
+			list.addAll(getKeysHavingValue(map, value));
+		}
+		
+		return list;
 	}
 
 	// TODO: move up
 	String displayMap(Map<Integer, String> map) {
+		String string = "";
 		// Use map.entrySet()to have nice display
 		for (Entry<Integer, String> entry : map.entrySet()) {
-			System.out.println("Entry:" + entry.getKey());
-			System.out.println("Value:" + entry.getValue());
+			//System.out.println("Entry:" + entry.getKey());
+			//System.out.println("Value:" + entry.getValue());
+			string += entry.getValue() + "->" + entry.getKey() + " : ";
 		}
 
-		return null;
+		return string;
 	}
 
 	List<Card> getCards(Map<Integer, Character> map) {
-		return null;
+		List<Card> list = new ArrayList<>();
+		for (Entry<Integer, Character> entry : map.entrySet()){
+			list.add(new Card(entry.getKey(), entry.getValue()));
+		}
+
+		return list;
 	}
 
 }
